@@ -9,10 +9,9 @@ const AdminLayout = () => {
     if (isLoading) {
         return <h1>isLoading...</h1>
     }
-
-    const { name } = useParams()
     debugger
     if (!user.isAdmin) {
+        debugger
         window.location.href = "/";
     }
     return (

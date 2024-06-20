@@ -3,7 +3,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 
-
+const API = import.meta.env.VITE_API_URI_SERVER;
+debugger
 export const AuthProvider = ({ children }) => {
 
     const [token, setToken] = useState(localStorage.getItem("token"));
@@ -40,7 +41,7 @@ export const AuthProvider = ({ children }) => {
                 setIsLoading(false);
             }
         } catch (error) {
-            console.error("error", error);
+            console.error(error);
             setIsLoading(false);
         }
     }
